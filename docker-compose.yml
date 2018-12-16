@@ -1,0 +1,10 @@
+version: '3'
+services:  
+  redis-server:
+    image: 'redis'
+    command: 
+      - redis-server --protected-mode no
+  node-app:
+    build: .
+    ports:
+      - "5001:8082"
